@@ -10,13 +10,13 @@ const GENERATION = {
       id: "yumekawa-akira",
       name: "유메카와 아키라",
       image: "/crew/유메카와 아키라 프로필.png",
-      bioImage: "/crew/유메카와 아키라 자기소개서.png",
+      bioImage: "/crew/about/유메카와 아키라 자기소개서.png",
     },
     {
       id: "bct",
       name: "고장난고양이장난감",
       image: "/crew/고장난고양이장난감 프로필.png",
-      bioImage: "/crew/고장난고양이장난감 자기소개서.png",
+      bioImage: "/crew/about/고장난고양이장난감 자기소개서.png",
     },
   ],
 };
@@ -34,7 +34,6 @@ export default function CrewPage() {
     setOpen(false);
   };
 
-  // ESC로 닫기 + 열렸을 때 배경 스크롤 잠금
   useEffect(() => {
     if (!open) return;
 
@@ -65,22 +64,22 @@ export default function CrewPage() {
             onClick={() => openModal(m)}
             aria-label={`${m.name} 프로필 열기`}
           >
-            <div className="crew1_image">
+            <div className={`crew1_image crew1_hover_${m.id}`}>
               <Image
                 src={m.image}
                 alt={`${m.name} 이미지`}
-                width={220}
-                height={260}
+                fill
+                sizes="(max-width: 900px) 92vw, 360px"
                 priority
-                style={{ height: "auto" }}
+                style={{ objectFit: "contain" }}
               />
             </div>
+
             <div className="crew1_name">{m.name}</div>
           </button>
         ))}
       </div>
 
-      {/* 모달 */}
       {open && selected && (
         <div
           className="virlab_modal_overlay"
@@ -89,10 +88,7 @@ export default function CrewPage() {
           aria-label={`${selected.name} 프로필`}
           onClick={closeModal}
         >
-          <div
-            className="virlab_modal"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="virlab_modal" onClick={(e) => e.stopPropagation()}>
             <div className="virlab_modal_head">
               <div className="virlab_modal_title">{selected.name}</div>
               <button
@@ -106,7 +102,6 @@ export default function CrewPage() {
             </div>
 
             <div className="virlab_modal_body">
-              {/* 왼쪽: 캐릭터 */}
               <div className="virlab_modal_left">
                 <div className="virlab_modal_avatar">
                   <Image
@@ -119,7 +114,6 @@ export default function CrewPage() {
                 </div>
               </div>
 
-              {/* 오른쪽: 자기소개서 이미지 */}
               <div className="virlab_modal_right">
                 {selected.bioImage ? (
                   <div className="virlab_modal_bio">

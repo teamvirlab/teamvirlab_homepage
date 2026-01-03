@@ -389,14 +389,36 @@ body {
 }
 
 .crew1 {
-  margin-top: 100px;
+  flex: 1;
+  min-height: calc(100vh - 110px);
+  padding: 30px 18px 50px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  justify-content: center;
+  gap: 26px;
 }
 
-/* 멤버를 button으로 썼으니 기본 버튼 스타일 제거 */
+.crew1_title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.crew1_row {
+  width: 100%;
+  max-width: 980px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px;
+  align-items: end;
+}
+
 .crew1_member {
   background: transparent;
   border: none;
@@ -406,25 +428,70 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .crew1_member:focus-visible {
   outline: 3px solid rgba(120, 180, 255, 0.45);
-  outline-offset: 6px;
+  outline-offset: 8px;
   border-radius: 18px;
 }
 
-/* 살짝 hover로 살아나는 느낌 */
-.crew1_member:hover .crew1_image {
-  transform: translateY(-2px);
-}
-
 .crew1_image {
-  transition: transform 0.15s ease;
+  position: relative;
+  width: 360px;
+  height: 150px;
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
 }
 
-/* 모달 오버레이 */
+.crew1_member:hover .crew1_image {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+}
+
+.crew1_name {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.crew1_member:hover .crew1_hover_yumekawa-akira {
+  box-shadow:
+    0 20px 70px rgba(40, 120, 255, 0.25),
+    0 18px 50px rgba(0, 0, 0, 0.35);
+  filter: saturate(1.12);
+}
+
+.crew1_member:hover .crew1_hover_bct {
+  box-shadow:
+    0 20px 70px rgba(200, 90, 255, 0.22),
+    0 18px 50px rgba(0, 0, 0, 0.35);
+  filter: contrast(1.06) saturate(1.06);
+}
+
+@media (max-width: 900px) {
+  .crew1_row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .crew1_image {
+    width: min(92vw, 420px);
+    height: 150px;
+  }
+}
+
 .virlab_modal_overlay {
   position: fixed;
   inset: 0;
@@ -440,7 +507,6 @@ body {
   padding: 18px;
 }
 
-/* 모달 본체 */
 .virlab_modal {
   width: min(980px, 100%);
   max-height: 88vh;
@@ -453,7 +519,6 @@ body {
   box-shadow: 0 30px 80px rgba(0,0,0,0.35);
 }
 
-/* 모달 헤더 */
 .virlab_modal_head {
   position: sticky;
   top: 0;
@@ -494,7 +559,6 @@ body {
   background: rgba(0,0,0,0.1);
 }
 
-/* 모달 바디: 좌 캐릭터 / 우 자기소개서 */
 .virlab_modal_body {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -525,7 +589,6 @@ body {
   font-weight: 600;
 }
 
-/* 모바일 */
 @media (max-width: 820px) {
   .virlab_modal_body {
     grid-template-columns: 1fr;
@@ -535,6 +598,7 @@ body {
     max-height: 92vh;
   }
 }
+
 
 @media (max-width: 768px) {
   .footer_inner {
