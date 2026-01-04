@@ -22,9 +22,15 @@ export default function Home() {
           <div className="about_anchor_des">Team Virlab은 대한민국의 버추얼 스트리머와 우타이테 크루입니다.
             <br />
             <br />
-            Team Virlab은 누구나 참여할 기회가 있으며,
+            같은 방향을 바라보는 사람들이 필요할 때 함께하고,
             <br />
-            세상을 각자의 개성으로 칠해나가자는 사명을 가지고 활동하고 있습니다.</div>
+            각자의 자리에서 빛날 수 있는 곳이 되기를 목표로 하고 있습니다.
+            <br />
+            <br />
+            Team Virlab은 세상을 우리들의 색,
+            <br />
+            즉 각자의 개성이 세상을 칠할 수 있는 세상을 만들기 위해 노력하고 있습니다.
+          </div>
         </div>
 
         <div className="about_anchor">

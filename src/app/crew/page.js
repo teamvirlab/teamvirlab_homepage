@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+import { FaXTwitter, FaYoutube } from "react-icons/fa6";
+
 const GENERATION = {
   title: "1기 · 아스트라",
   members: [
@@ -11,15 +13,25 @@ const GENERATION = {
       name: "유메카와 아키라",
       image: "/crew/유메카와 아키라 프로필.png",
       bioImage: "/crew/about/유메카와 아키라 자기소개서.png",
+      socials: {
+        x: "https://x.com/yumekawa_akira",
+        chzzk: "https://chzzk.naver.com/6646ba379e2d8918f10ca86de3073296",
+        youtube: "https://youtube.com/@yumekawaakira",
+      },
     },
     {
       id: "bct",
       name: "고장난고양이장난감",
       image: "/crew/고장난고양이장난감 프로필.png",
       bioImage: "/crew/about/고장난고양이장난감 자기소개서.png",
+      socials: {
+        x: "https://x.com/brokencattoy",
+        chzzk: "https://chzzk.naver.com/b0d22099ff3b6551c6c24ac814d4f95c",
+      },
     },
   ],
 };
+
 
 export default function CrewPage() {
   const [open, setOpen] = useState(false);
@@ -112,6 +124,50 @@ export default function CrewPage() {
                     style={{ height: "auto" }}
                   />
                 </div>
+                {selected.socials && (
+                <div className="virlab_modal_socials">
+                  {selected.socials.x && (
+                    <a
+                      href={selected.socials.x}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="X"
+                      className="virlab_social_btn x"
+                    >
+                      <FaXTwitter />
+                    </a>
+                  )}
+
+                  {selected.socials.chzzk && (
+                    <a
+                      href={selected.socials.chzzk}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="치지직"
+                      className="virlab_social_btn chzzk"
+                    >
+                      <Image
+                        src="/icons/chzzk.png"
+                        alt="치지직"
+                        width={20}
+                        height={20}
+                      />
+                    </a>
+                  )}
+
+                  {selected.socials.youtube && (
+                    <a
+                      href={selected.socials.youtube}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="YouTube"
+                      className="virlab_social_btn youtube"
+                    >
+                      <FaYoutube />
+                    </a>
+                  )}
+                </div>
+              )}
               </div>
 
               <div className="virlab_modal_right">
