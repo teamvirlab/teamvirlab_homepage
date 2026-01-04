@@ -69,7 +69,7 @@ export default function Home() {
               </div>
               <span className="home_button_text">문의하기</span>
             </Link>
-            <a href="https://x.com/virlab_official" className="home_button">
+            <a href="https://x.com/virlab_official" className="home_button" target="_blank">
               <div className="home_button_icon">
                 <BsTwitterX 
                   alt="X(구 트위터)"

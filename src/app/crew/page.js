@@ -18,6 +18,8 @@ const GENERATION = {
         chzzk: "https://chzzk.naver.com/6646ba379e2d8918f10ca86de3073296",
         youtube: "https://youtube.com/@yumekawaakira",
       },
+      membership: "Team Virlab 1기ㆍ아스트라",
+      info: "은하수에서 유성우들을 찾으러 내려온 별,\n버추얼 스트리머 유메카와 아키라입니다!",
     },
     {
       id: "bct",
@@ -29,6 +31,8 @@ const GENERATION = {
         chzzk: "https://chzzk.naver.com/b0d22099ff3b6551c6c24ac814d4f95c",
         youtube: "https://www.youtube.com/@고장난고양이장난감",
       },
+      membership: "Team Virlab 1기ㆍ아스트라",
+      info: "치지직 , 유튜브에서 패러독스사 게임(호이, 빅토 ,윾등등)을 하는 고장난고양이장난감이라고 합니다!",
     },
   ],
 };
@@ -124,6 +128,11 @@ export default function CrewPage() {
                     height={280}
                     style={{ height: "auto" }}
                   />
+                </div>
+                <div className="virlab_modal_info">
+                  <div className="virlab_modal_title">{selected.name}</div>
+                  <div className="virlab_modal_subtitle">{selected.membership}</div>
+                  <div className="virlab_modal_des">{selected.info}</div>
                 </div>
                 {selected.socials && (
                 <div className="virlab_modal_socials">

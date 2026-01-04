@@ -3,11 +3,15 @@ import { MdAlternateEmail } from "react-icons/md";
 import { TbMessageReport } from "react-icons/tb";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 
-export default function Home() {
+export default function Contact() {
   return (
     <>
     <div className="page-content">
-      <section className="home">
+      <section className="contact">
+        <div className="contact_title">
+          <h1 className="title_gradient">문의하기</h1>
+          <p>Team Virlab에 문의사항이 있으신가요? 아래의 이메일 주소로 연락해 주세요!</p>
+        </div>
         <div className="buttons_div">
           <div className="buttons_grid">
             <a href="mailto:contact@virlab.kr" className="home_button">
