@@ -27,6 +27,7 @@ const GENERATION = {
       socials: {
         x: "https://x.com/brokencattoy",
         chzzk: "https://chzzk.naver.com/b0d22099ff3b6551c6c24ac814d4f95c",
+        youtube: "https://www.youtube.com/@고장난고양이장난감",
       },
     },
   ],
@@ -149,8 +150,8 @@ export default function CrewPage() {
                       <Image
                         src="/icons/chzzk.png"
                         alt="치지직"
-                        width={20}
-                        height={20}
+                        width={30}
+                        height={30}
                       />
                     </a>
                   )}
