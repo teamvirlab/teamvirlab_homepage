@@ -13,6 +13,23 @@ export default function Footer() {
           <p className="footer_copy">
             © {new Date().getFullYear()} Team Virlab. All rights reserved.
           </p>
+          <div className="footer_links">
+            <a
+              href="/operating-policy"
+              rel="noopener noreferrer"
+              className="footer_link"
+            >
+              운영방침
+            </a>
+            <div className="footer_link_divider">|</div>
+            <a
+              href="/guidelines"
+              rel="noopener noreferrer"
+              className="footer_link"
+            >
+              2차 창작 가이드라인
+            </a>
+          </div>
         </div>
       </div>
     </footer>

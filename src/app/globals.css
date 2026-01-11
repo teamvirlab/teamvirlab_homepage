@@ -502,6 +502,127 @@ body {
   filter: contrast(1.06) saturate(1.06);
 }
 
+.footer_links {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.footer_links a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.footer_link_divider {
+  width: 2px;
+  margin: 0 8px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.guidelines {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.guidelines {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 20px 60px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.guidelines_title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+
+  background: linear-gradient(to right, #2B178D, #5DB7EF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.guidelines_p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* 섹션 제목 (0., 1., 2. ...) */
+.guidelines b {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.guidelines_list {
+  margin: 6px 0 18px 18px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.guidelines_list li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.guidelines_note {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 13.5px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+@media (max-width: 768px) {
+  .guidelines {
+    padding: 120px 16px 50px;
+  }
+
+  .guidelines_title {
+    font-size: 26px;
+  }
+
+  .guidelines b {
+    font-size: 16px;
+  }
+
+  .guidelines_p {
+    font-size: 14px;
+  }
+
+  .guidelines_list li {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .guidelines {
+    padding: 110px 14px 40px;
+  }
+
+  .guidelines_title {
+    font-size: 23px;
+  }
+
+  .guidelines_list {
+    margin-left: 14px;
+  }
+}
+
+
 @media (max-width: 900px) {
   .crew1_row {
     grid-template-columns: 1fr;

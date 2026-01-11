@@ -13,13 +13,19 @@ export default function Home() {
       image: "/slide1.png",
       title: "세상을 우리들의 색으로!",
       subtitle: "Team Virlab 공식 홈페이지에 오신 것을 환영합니다.",
+      href: "/crew",
+      buttonLabel: "크루 보러가기",
+      newTab: false,
     },
     {
-      image: "/slide2.png",
-      title: "사이트 개발 중!",
+      image: "/slide4.png",
+      title: "2차 창작 가이드라인",
       subtitle:
-        "Team Virlab은 여러분들께 더 빨리 홈페이지를 공개할 수 있도록 노력하고 있습니다. 조금만 기다려 주세요!",
-    },
+        "Team Virlab이 소유한 버추얼 스트리머 IP 및 우타이테 IP를 이용한 시청자 여러분의 2차 창작 활동을 장려하기 위해 제작된 가이드라인을 확인해보세요!",
+      href: "/guidelines",
+      buttonLabel: "가이드라인 보러가기",
+      newTab: true,
+      },
     {
       image: "/slide3.png",
       title: "Team Virlab 네이버 카페",
